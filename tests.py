@@ -14,7 +14,6 @@ class Tests(unittest.TestCase):
             other_word = "".join(chars)
             return word, other_word
         word, other_word = create_random_anagram()
-        print(word, other_word, isAnagram(word, other_word))
         self.assertTrue(isAnagram(word, other_word))
         self.assertFalse(isAnagram(word, other_word[:-1]))
 
