@@ -4,6 +4,7 @@ import random
 import string 
 from anagrams import isAnagram
 from binary_heap import BinaryHeap
+from fib import fib
 
 class Tests(unittest.TestCase):
     
@@ -48,6 +49,20 @@ class Tests(unittest.TestCase):
 
         self.assertEqual(heap.peak(), None)
         self.assertEqual(heap.remove(), None)
+
+    def test_fib(self):
+        self.assertEqual(fib(0), 0)
+        self.assertEqual(fib(1), 1)
+        self.assertEqual(fib(2), 1)
+        self.assertEqual(fib(3), 2)
+
+        self.assertEqual(fib(6), 8)
+        self.assertEqual(fib(10), 55)
+        self.assertEqual(fib(14), 377)
+        self.assertEqual(fib(18), 2584)
+        self.assertEqual(fib(1000), 43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875)
+
+
 
             
 if __name__ == '__main__':

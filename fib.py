@@ -7,6 +7,4 @@ def fib(n: int) -> int:
     curr = 1
     for i in range(2, n + 1):
         prev, curr = curr,  prev + curr
-        print(i, curr)
     return curr
-print(fib(14))
